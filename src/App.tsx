@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link, Route } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -18,9 +19,17 @@ function App() {
         >
           Learn React
         </a>
+        <Link to="/test">let's test</Link>
       </header>
+      <main>
+        <Route path="/test" component={Test} />
+      </main>
     </div>
   );
 }
+
+const Test: React.FC = () => {
+  return <div>test</div>;
+};
 
 export default App;
