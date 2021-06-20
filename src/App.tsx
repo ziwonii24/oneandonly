@@ -1,35 +1,20 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
-import logo from "./logo.svg";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
+import CommingSoon from "./components/CommingSoon";
+import RouterTest from "./components/RouterTest";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Link to="/test">let's test</Link>
-      </header>
-      <main>
-        <Route path="/test" component={Test} />
+      <main className="App-main">
+        <Switch>
+          <Route exact path="/" component={CommingSoon} />
+          <Route path="/test" component={RouterTest} />
+        </Switch>
       </main>
     </div>
   );
-}
-
-const Test: React.FC = () => {
-  return <div>test</div>;
 };
 
 export default App;
