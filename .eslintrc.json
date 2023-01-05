@@ -1,0 +1,104 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
+  "rules": {
+    "no-tabs": [
+      "error",
+      {
+        "allowIndentationTabs": true
+      }
+    ],
+    "no-mixed-spaces-and-tabs": 0,
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^react", "^(?!src)(?=@?\\w)"],
+          [
+            "constants",
+            "hooks",
+            "reducers",
+            "routes",
+            "store",
+            "types",
+            "utils"
+          ],
+          [
+            "views",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            "components"
+          ],
+          ["assets", "^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "import/order": "off",
+    "import/extensions": [
+      "off",
+      {
+        "ts": "always",
+        "tsx": "always",
+        "js": "always",
+        "jsx": "always"
+      }
+    ],
+    "import/no-unresolved": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "react/destructuring-assignment": 0,
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ],
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "comma-dangle": "off",
+    "react/prop-types": "off",
+    "operator-linebreak": "off",
+    "import/prefer-default-export": "warn",
+    "no-console": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-curly-newline": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "@typescript-eslint/ban-types": "warn",
+    "no-nested-ternary": "off",
+    "indent": "off",
+    "camelcase": "off",
+    "no-confusing-arrow": "off",
+    "function-paren-newline": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "no-plusplus": "warn",
+    "react/jsx-wrap-multilines": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "react/require-default-props": [
+      1,
+      {
+        "functions": "ignore"
+      }
+    ]
+  }
+}

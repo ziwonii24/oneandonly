@@ -12,7 +12,17 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-main {
-    animation: App-main-bounce 2s ease-in-out 0s infinite alternate;
+    -webkit-animation: App-main-bounce 2s ease-in-out 0s infinite alternate;
+            animation: App-main-bounce 2s ease-in-out 0s infinite alternate;
+  }
+}
+
+@-webkit-keyframes App-main-bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
   }
 }
 
